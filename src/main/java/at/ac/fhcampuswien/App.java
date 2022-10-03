@@ -15,7 +15,7 @@ public class App {
     //todo Task 2
     public void helloRobot(){
         // input your solution here
-//       // Break als Variable speichern um zeichen zu sparen möglich
+//       // Break als Variable speichern um Zeichen zu sparen möglich
         System.out.println("0123456789012345678901" + System.lineSeparator() +
                 "         __" + System.lineSeparator() +
                 " _(\\    |@@|" + System.lineSeparator() +
@@ -39,8 +39,9 @@ public class App {
         float e = 44e-1f;
         float f = 5.5f;
         double g = 8.88e1;
+        double h = 99.9;
 
-        int sum = a + b + c + (int)d + (int)e + (int)f + (int)g;
+        int sum = a + b + c + (int)d + (int)e + (int)f + (int)g + (int)h;
 
         System.out.println(sum);
     }
@@ -112,7 +113,6 @@ public class App {
     public void getCommissionRate(){
         // input your solution here
         System.out.println("Enter CommissionClass:");
-        // input your solution here
         Scanner numberinput = new Scanner(System.in);
         int comissionClass = numberinput.nextInt();
 
@@ -138,7 +138,6 @@ public class App {
     public void leapyear(){
         // input your solution here
         System.out.println("Year:");
-        // input your solution here
         Scanner numberinput = new Scanner(System.in);
         int year = numberinput.nextInt();
 
@@ -146,6 +145,8 @@ public class App {
             System.out.println("Not a leapyear");
         } else if (year % 4 == 0) {
             System.out.println("Leapyear");
+        } else {
+            System.out.println("Not a leapyear");
         }
     }
 
@@ -153,11 +154,10 @@ public class App {
     public void transposedNumbers(){
         // input your solution here
         System.out.println("Number:");
-        // input your solution here
         Scanner numberinput = new Scanner(System.in);
         int num = numberinput.nextInt();
 
-        // Wenn bei input nicht int dann return = keine Ausgabe
+        // Wenn bei input größer als 999 dann return = keine Ausgabe
         if (num > 999){
             return;
         }
@@ -167,7 +167,6 @@ public class App {
             return;
         }
 
-        // varibable z durch prüfung zehnerstelle oder hunderter (inline if)
         int firstDecimal = num % 10;
         System.out.print(firstDecimal);
 
