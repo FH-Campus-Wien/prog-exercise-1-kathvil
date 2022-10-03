@@ -1,7 +1,5 @@
 package at.ac.fhcampuswien;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class App {
@@ -63,11 +61,15 @@ public class App {
         int firstNum = numberinput.nextInt();
         int secondNum = numberinput.nextInt();
 
+        System.out.print("Before Swap:" + System.lineSeparator() +
+                "x: " +
+                "y: " + "After Swap:" );
+
         firstNum += secondNum;
         secondNum = firstNum - secondNum;
         firstNum -= secondNum;
 
-        System.out.print("x: " + firstNum + System.lineSeparator() + "y: " + secondNum);
+        System.out.print(System.lineSeparator() + "x: " + firstNum + System.lineSeparator() + "y: " + secondNum + System.lineSeparator());
     }
 
     //todo Task 6
@@ -77,83 +79,83 @@ public class App {
         int firstNum = numberinput.nextInt();
         int secondNum = numberinput.nextInt();
 
-        System.out.println("n1: " + firstNum + System.lineSeparator()+ "n2: " + secondNum);
+        System.out.print("n1: " + "n2: ");
 
         if (firstNum == secondNum) {
-            System.out.println("n1 == n2");
+            System.out.print("n1 == n2" + System.lineSeparator());
             return;
         } else if (firstNum > secondNum) {
-            System.out.println("n1 > n2");
+            System.out.print("n1 > n2" + System.lineSeparator());
             return;
         }
-        System.out.println("n2 > n1");
+        System.out.print("n2 > n1" + System.lineSeparator());
     }
 
     //todo Task 7
     public void ratingSalesPerson(){
-        System.out.println("Enter annual Revenue:");
+        System.out.print("Enter annual Revenue: ");
         // input your solution here
         Scanner numberinput = new Scanner(System.in);
         int sales = numberinput.nextInt();
 
         if (sales < 0 || sales >= 100000) {
-            System.out.println("Invalid Revenue");
+            System.out.print("Invalid Revenue" + System.lineSeparator());
             // sales is always >= 0 due to the condition check in line 97
         } else if (sales < 20000) {
-            System.out.println("Poor Sales Revenue");
+            System.out.print("Poor Sales Revenue" + System.lineSeparator());
         } else if (sales >= 50000 && sales < 80000) {
-            System.out.println("Good Sales Revenue");
+            System.out.print("Good Sales Revenue" + System.lineSeparator());
             // sales is always < 100000 due to the condition check in line 97
         } else if (sales >= 80000) {
-            System.out.println("Excellent Sales Revenue");
+            System.out.print("Excellent Sales Revenue: ");
         }
     }
 
     //todo Task 8
     public void getCommissionRate(){
         // input your solution here
-        System.out.println("Enter CommissionClass:");
+        System.out.print("Enter CommissionClass: ");
         Scanner numberinput = new Scanner(System.in);
         int comissionClass = numberinput.nextInt();
 
         switch (comissionClass) {
             case 1:
-                System.out.println("Your Commission Rate was set to 0.01");
+                System.out.print("Your Commission Rate was set to 0.01" + System.lineSeparator());
                 break;
             case 2:
-                System.out.println("Your Commission Rate was set to 0.02");
+                System.out.print("Your Commission Rate was set to 0.02" + System.lineSeparator());
                 break;
             case 3:
-                System.out.println("Your Commission Rate was set to 0.03");
+                System.out.print("Your Commission Rate was set to 0.03" + System.lineSeparator());
                 break;
             case 4:
-                System.out.println("Your Commission Rate was set to 0.04");
+                System.out.print("Your Commission Rate was set to 0.04" + System.lineSeparator());
                 break;
             default:
-                System.out.println("Your Commission Rate was set to 0.00");
+                System.out.print("Your Commission Rate was set to 0.0" + System.lineSeparator());
         }
     }
 
     //todo Task 9
     public void leapyear(){
         // input your solution here
-        System.out.println("Year:");
+        System.out.print("Year: ");
         Scanner numberinput = new Scanner(System.in);
         int year = numberinput.nextInt();
 
         if (year % 100 == 0 && year%400 != 0) {
-            System.out.println("Not a leapyear");
+            System.out.print("Not a Leapyear" + System.lineSeparator());
         } else if (year % 4 == 0) {
-            System.out.println("Leapyear");
+            System.out.print("Leapyear" + System.lineSeparator());
         } else {
-            System.out.println("Not a leapyear");
+            System.out.print("Not a Leapyear" + System.lineSeparator());
         }
     }
 
     //todo Task 10
     public void transposedNumbers(){
         // input your solution here
-        System.out.println("Number:");
+        System.out.print("Number: ");
         Scanner numberinput = new Scanner(System.in);
         int num = numberinput.nextInt();
 
@@ -163,7 +165,7 @@ public class App {
         }
 
         if (num >= 0 && num < 10) {
-            System.out.print(num);
+            System.out.print(num + System.lineSeparator());
             return;
         }
 
@@ -172,13 +174,13 @@ public class App {
 
         if (num >= 10 && num < 100) {
             int secondDecimal = (num - firstDecimal) / 10;
-            System.out.print(secondDecimal);
+            System.out.print(secondDecimal + System.lineSeparator());
         }
 
         if (num >= 100) {
             int secondDecimal = ((num - firstDecimal) / 10) % 10;
             int thirdDecimal = (num - firstDecimal - secondDecimal * 10) / 100;
-            System.out.print(""+ secondDecimal + thirdDecimal);
+            System.out.print(""+ secondDecimal + thirdDecimal  + System.lineSeparator());
         }
     }
 
